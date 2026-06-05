@@ -15,7 +15,7 @@ app.use(cors({
 }))
 
 app.get("/", (req, res) => {
-  res.json({ ok: true })
+  res.send("Teste")
 })
 
 app.use("/alunos", alunoRouter);
