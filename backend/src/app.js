@@ -14,6 +14,10 @@ app.use(cors({
   credentials: true
 }))
 
+app.get("/", (req, res) => {
+  res.json({ ok: true })
+})
+
 app.use("/alunos", alunoRouter);
 app.use("/avaliacoes", avaliacaoRouter);
 app.use("/dashboard", dashboardRouter);

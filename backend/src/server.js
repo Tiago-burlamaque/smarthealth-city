@@ -1,10 +1,18 @@
-import app from "./app.js";
-import dotenv from 'dotenv';
+import app from "./app.js"
+import db from "./database/connection.js"
 
-dotenv.config()
+const PORT = process.env.PORT || 3000
 
-const PORT = process.env.PORT;
+// 🔥 TESTE DE CONEXÃO COM MYSQL
+db.getConnection()
+    .then(conn => {
+        console.log("✅ MySQL conectado")
+        conn.release()
+    })
+    .catch(err => {
+        console.error("❌ Erro MySQL:", err)
+    })
 
 app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`)
+    console.log(`🚀 Server running on port ${PORT}`)
 })
