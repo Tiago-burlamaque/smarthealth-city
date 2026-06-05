@@ -1,9 +1,9 @@
 import express from 'express'
 import cors from 'cors'
-import alunoRouter from './routes/aluno.Routes.js'
-import avaliacaoRouter from './routes/avaliacao.Routes.js'
-import dashboardRouter from './routes/dashboard.Routes.js'
 
+import alunoRouter from "./routes/alunoRoutes.js"
+import dashboardRouter from "./routes/dashboardRoutes.js";
+import avaliacaoRouter from "./routes/avaliacaoRoutes.js";
 
 const app = express()
 
